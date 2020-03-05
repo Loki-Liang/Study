@@ -12,7 +12,7 @@ namespace Study
         {
             static void PrintTest()
             {
-                Console.WriteLine("hello word");
+                
             }
         }
     }
