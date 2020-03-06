@@ -21,14 +21,17 @@ namespace LearningASPMVC.Models
         {
             return null;
         }
+
          public void Add(Student stu)
         {
             db.Students.Add(stu);
         }
+
         public void Delete(Student stu)
         {
             db.Students.Remove(stu);
         }
+
         public void Save()
         {
             db.SaveChanges();
