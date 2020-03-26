@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study", "Study\Study.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningASPMVC", "LearningASPMVC\LearningASPMVC.csproj", "{31DAF514-BBFA-424B-9901-6F7DB81B0976}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservationData", "RoomReservationData\RoomReservationData.csproj", "{DB47A6EE-F355-4F7E-B0EB-33D3863DA8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservationService", "RoomReservationService\RoomReservationService.csproj", "{89C23464-D271-4744-872C-8EE98414DDE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{31DAF514-BBFA-424B-9901-6F7DB81B0976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31DAF514-BBFA-424B-9901-6F7DB81B0976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31DAF514-BBFA-424B-9901-6F7DB81B0976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB47A6EE-F355-4F7E-B0EB-33D3863DA8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB47A6EE-F355-4F7E-B0EB-33D3863DA8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB47A6EE-F355-4F7E-B0EB-33D3863DA8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB47A6EE-F355-4F7E-B0EB-33D3863DA8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C23464-D271-4744-872C-8EE98414DDE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C23464-D271-4744-872C-8EE98414DDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C23464-D271-4744-872C-8EE98414DDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C23464-D271-4744-872C-8EE98414DDE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,5 +26,10 @@ namespace LearningASPMVC.Controllers
 
             return View();
         }
+
+        public bool IsTelephone(string str_telephone)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(str_telephone, @"^(\d{3,4}-)?\d{6,8}");
+        }
     }
 }

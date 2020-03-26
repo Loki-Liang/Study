@@ -10,10 +10,7 @@ namespace Study
     {
         static void Main(string[] args)
         {
-            static void PrintTest()
-            {
-                
-            }
+            
         }
     }
 }
