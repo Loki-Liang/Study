@@ -19,7 +19,7 @@ namespace Study
 
         public static double Square(double value)
         {
-            return value * value;
+            return value * value;   
 
         }
     }
@@ -83,6 +83,44 @@ namespace Study
                 Console.WriteLine($"Value is {value},result of operation is {result}");
 
             }
+
+            //one two 
+            Action d1 = One;
+            d1 += Two;
+
+            Delegate[] delegates = d1.GetInvocationList();
+            foreach(Action d in delegates)
+            {
+                try
+                {
+                    d();
+                }
+                catch
+                {
+                    Console.WriteLine("exception caught");
+                }
+            }
+
+            try
+            {
+                d1();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Exception caught");
+            }
+
+            //lambda
+            string mid = @"hello world ";
+            Func<string, string> lambda = param =>
+            {
+                param += mid;
+                param += "and this was added to the string.";
+                return param;
+            };
+            Console.WriteLine(lambda("this is "));
+
+
             Console.ReadLine();
         }
 
@@ -174,5 +212,18 @@ namespace Study
             }
         }
         #endregion 
+
+        static void One()
+        {
+            Console.WriteLine("One");
+            throw new Exception("Error One");
+
+        }
+        
+        static void Two()
+        {
+            Console.WriteLine("Two");
+        }
+
     }
 }
