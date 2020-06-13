@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Study
 {
@@ -29,7 +30,8 @@ namespace Study
     {
         delegate double DoubleOp(double x);
         private delegate string Getstring();
-        static void Main(string[] args)
+        public delegate int TakesAWhileDelegate(int data, int ms);
+        static void Main(string[] args) 
         {
             #region delegate select
             /*
@@ -120,6 +122,27 @@ namespace Study
             };
             Console.WriteLine(lambda("this is "));
 
+            #region 20.2 异步委托
+
+            static int TakesAWhile(int data,int ms)
+            {
+                Console.WriteLine("TakesAWhile started");
+                Thread.Sleep(ms);
+                Console.WriteLine("takesAWhile completed");
+                return ++data;
+            }
+            TakesAWhileDelegate dl = TakesAWhile;
+            IAsyncResult ar = dl.BeginInvoke(1, 3000, null, null);
+            while (!ar.IsCompleted)
+            {
+                Console.Write(".");
+                Thread.Sleep(50);
+            }
+
+            int result = dl.EndInvoke(ar);
+            Console.WriteLine($"result:{result}");
+
+            #endregion
 
             Console.ReadLine();
         }
@@ -224,6 +247,9 @@ namespace Study
         {
             Console.WriteLine("Two");
         }
+
+
+
 
     }
 }
